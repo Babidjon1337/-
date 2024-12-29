@@ -1,324 +1,161 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Планеты Солнечной системы</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инновационная тележка</title>
     <style>
-      :root {
-        --primary-color: #ff6f61;
-        --secondary-color: #2d2a4a;
-        --text-color: #ffffff;
-        --background-color: #1e1e2f;
-        --accent-color: #4fd1c5;
-        --menu-gradient: linear-gradient(135deg, #6e45e2, #88d3ce);
-      }
-
-      body {
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-        background-color: var(--background-color);
-        color: var(--text-color);
-      }
-
-      header {
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        background: var(--menu-gradient);
-        color: var(--text-color);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: relative;
-        z-index: 1000;
-      }
-
-      .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        margin-right: 20px;
-      }
-
-      .menu-toggle span {
-        background: var(--text-color);
-        height: 4px;
-        margin: 4px 0;
-        width: 25px;
-        border-radius: 2px;
-      }
-
-      nav {
-        position: fixed;
-        top: 0;
-        left: -300px;
-        width: 210px;
-        height: 100%;
-        background: var(--menu-gradient);
-        box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
-        display: flex;
-        flex-direction: column;
-        padding-top: 50px;
-        transition: left 0.4s ease;
-        z-index: 1100;
-      }
-
-      nav.active {
-        left: 0;
-      }
-
-      nav a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 20px;
-        padding: 15px 20px;
-        transition: background 0.3s ease;
-      }
-
-      nav a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 5px;
-      }
-
-      .hero {
-        text-align: center;
-        padding: 100px 20px;
-        color: var(--text-color);
-        background-image: url("https://cdn.culture.ru/images/d8145482-66ce-57d8-a705-e8ae34a2b74c");
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(46, 49, 65, 0.8);
-      }
-
-      .hero h1 {
-        font-size: 3em;
-        margin: 0;
-        position: relative;
-        z-index: 1;
-        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
-      }
-
-      .hero p {
-        font-size: 1.2em;
-        position: relative;
-        z-index: 1;
-      }
-
-      .planets {
-        padding: 20px;
-        text-align: center;
-      }
-
-      .planet {
-        margin: 20px 0;
-        padding: 20px;
-        background: var(--secondary-color);
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-color);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-      }
-
-      .planet:hover {
-        transform: translateY(-5px);
-      }
-
-      .planet img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      footer {
-        text-align: center;
-        padding: 10px;
-        background: var(--menu-gradient);
-        color: var(--text-color);
-        margin-top: 20px;
-        font-size: 15px;
-      }
-      .about {
-        text-align: center;
-        font-size: 15px;
-        padding: 10px;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <h1>Планеты</h1>
-    </header>
-
-    <nav id="nav-menu">
-      <a href="#home">Главная</a>
-      <a href="#planets">Планеты</a>
-      <a href="#about">О нас</a>
-    </nav>
-
-    <section class="hero" id="home">
-      <h1>Изучите Солнечную систему</h1>
-      <p>Погрузитесь в удивительный мир планет</p>
-    </section>
-
-    <section class="planets" id="planets">
-      <div class="planet">
-        <img
-          src="https://3dmodelsrender.wordpress.com/wp-content/uploads/2017/12/untitled.png"
-          alt="Меркурий"
-        />
-        <div>
-          <h2>Меркурий</h2>
-          <p>
-            Самая маленькая планета в нашей Солнечной системе и ближайшая к
-            Солнцу. У Меркурия нет атмосферы, и он испытывает экстремальные
-            температурные колебания.
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://resizer.mail.ru/p/a8b0a531-d73e-574d-8a4f-43a61688c077/AQAKEkAU7bJaXc7I-rqGIbFUic3CuCzXGHRCZtnR2WeeOdVLbgLV7z7SggKaIKQ50FGsjmJ_8FWPzqrpED4Yg-6E7a4.jpg"
-          alt="Венера"
-        />
-        <div>
-          <h2>Венера</h2>
-          <p>
-            Известна как близнец Земли, Венера имеет густую, токсичную атмосферу
-            и поверхности с температурами, достаточными для плавления свинца.
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://storge.pic2.me/upload/758/5f7f9695581832.92820477.jpg"
-          alt="Земля"
-        />
-        <div>
-          <h2>Земля</h2>
-          <p>
-            Единственная планета, известная как поддерживающая жизнь. Земля
-            покрыта огромными океанами и разнообразной атмосферой.
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://i.ytimg.com/vi/J7aV22Ixulg/maxresdefault.jpg"
-          alt="Марс"
-        />
-        <div>
-          <h2>Марс</h2>
-          <p>
-            Красная планета известна своей пыльной, каменистой поверхностью и
-            самым большим вулканом в Солнечной системе — Олимп Монс.
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://avatars.dzeninfra.ru/get-zen_doc/5286086/pub_610698b39bd3fc59f0b72372_610698e9b4685518d3730986/scale_1200"
-          alt="Юпитер"
-        />
-        <div>
-          <h2>Юпитер</h2>
-          <p>
-            Самая большая планета в Солнечной системе, известна своим Большим
-            Красным Пятном и множеством спутников.
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://paleontol.ru/wp-content/uploads/2021/09/1-8.jpg"
-          alt="Сатурн"
-        />
-        <div>
-          <h2>Сатурн</h2>
-          <p>
-            Известен своей впечатляющей системой колец, Сатурн — это газовый
-            гигант, состоящий преимущественно из водорода и гелия.
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://i.pinimg.com/originals/11/52/e5/1152e5278993bca2ab7d619f04b4f26a.png"
-          alt="Уран"
-        />
-        <div>
-          <h2>Уран</h2>
-          <p>
-            Ледяной гигант с голубоватым оттенком благодаря метану в атмосфере.
-            Уран вращается "на боку".
-          </p>
-        </div>
-      </div>
-      <div class="planet">
-        <img
-          src="https://relax-fm.ru/vardata/modules/news/files/1/145/news_file_145_5c4eab38adc82.jpg"
-          alt="Нептун"
-        />
-        <div>
-          <h2>Нептун</h2>
-          <p>
-            Самая дальняя планета от Солнца, Нептун известен своим насыщенным
-            синим цветом и сверхзвуковыми ветрами.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <h2>О нас</h2>
-      <p>
-        Этот сайт создан для всех любителей астрономии, которые хотят узнать
-        больше о нашей удивительной Солнечной системе. Мы стремимся сделать
-        изучение космоса доступным и увлекательным.
-      </p>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Буланов Родион и Кавалеристова София.</p>
-    </footer>
-
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const navMenu = document.getElementById("nav-menu");
-
-      menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      // Ensure menu is above all content
-      document.addEventListener("click", (event) => {
-        if (
-          !navMenu.contains(event.target) &&
-          !menuToggle.contains(event.target)
-        ) {
-          navMenu.classList.remove("active");
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            color: #333;
         }
-      });
-    </script>
-  </body>
+
+        .app {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .app-header {
+            background: #4caf50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .app-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .app-header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #4caf50;
+        }
+
+        section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #f9fafb;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #4caf50;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .app-footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            margin: 20px auto;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 1em;
+            margin: 0 0 15px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>Инновационная тележка</h1>
+            <p>Умное решение для современного шопинга.</p>
+        </header>
+
+        <section class="idea">
+            <h2>Наша идея</h2>
+            <p>
+                Мы разрабатываем тележку для супермаркетов, оснащенную технологией автоматического сканирования
+                продуктов и расчета их цен. Тележка будет оборудована дисплеем для отображения общей суммы покупок
+                и детализации каждого товара. Для реализации используются инновационные технологии, такие как RFID
+                и компьютерное зрение.
+            </p>
+        </section>
+
+        <section class="principle">
+            <h2>Принцип работы</h2>
+            <p>
+                Умная тележка автоматически считает сумму покупок и обновляет её при добавлении или удалении
+                товаров. На дисплее выводятся подсказки, например, рецепты блюд на основе выбранных продуктов.
+                Тележка успешно используется в сетях магазинов: Магнит, Пятёрочка, Перекрёсток, Вкусвилл.
+            </p>
+        </section>
+
+        <div class="card">
+            <img src="https://s.yimg.com/os/creatr-uploaded-images/2022-07/fabf6b80-020e-11ed-84af-98d86d519cf2" alt="Инновационная тележка">
+            <div class="card-content">
+                <h2 class="card-title">Инновационная тележка</h2>
+                <p class="card-description">Умная тележка для супермаркетов с автоматическим сканированием товаров и расчетом их цен, оснащенная дисплеем для отображения общей суммы покупок и рекомендаций.</p>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <p>© 2024 Инновационная тележка. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
 </html>
